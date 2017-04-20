@@ -1,5 +1,15 @@
 ### Bioinformatics Utilities
 
+# Bash
+
+**Convert _fastq_ to _fasta_**
+```
+sed -n '1~4s/^@/>/p;2~4p’ file.fastq > file.fasta
+```
+**Rename files from different folders**
+```
+ls | while read line ; do cp ./${line}/file.fl ./${line}
+```
 # Dockers
 
 **Download Docker**
