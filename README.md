@@ -1,6 +1,6 @@
-### Bioinformatics Utilities
+# Bioinformatics Utilities
 
-# Bash
+## Bash
 
 **Convert _fastq_ to _fasta_**
 ```
@@ -10,7 +10,15 @@ sed -n '1~4s/^@/>/p;2~4p’ file.fastq > file.fasta
 ```
 ls | while read line ; do cp ./${line}/file.fl ./${line}
 ```
-# Dockers
+**Find files**
+```
+find / -name "file.txt"
+```
+**Find zero bytes files and erase from the face of the earth!**
+```
+find . -type f -size 0
+```
+## Dockers
 
 **Download Docker**
 ```
