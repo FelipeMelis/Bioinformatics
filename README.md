@@ -14,7 +14,7 @@ ls | while read line ; do cp ./${line}/file.fl ./${line} ; done
 ```
 find / -name "file.txt"
 ```
-**Find zero bytes files and erase from the face of the earth!**
+**Find zero bytes files and erase them from the face of the earth!**
 ```
 find . -type f -size 0 | while read line; do rm ${line} ; done 
 ```
