@@ -30,7 +30,7 @@ git checkout -b branchname
 ```
 git add -A (or ./file.fl)
 git commit -m 'this change is for rucula'
-git push origin branchname (or master (never do master :colission:))
+git push origin branchname (or master (never do master))
 ```
 
 **Solution when you something to big to GitHub**
