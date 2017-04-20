@@ -18,6 +18,20 @@ find / -name "file.txt"
 ```
 find . -type f -size 0 | while read line; do rm ${line} ; done 
 ```
+## GitHub
+
+**Create a Branch**
+```
+git pull origin master
+git checkout -b branchname
+```
+
+**Solution when you something to big to GitHub**
+```
+git filter-branch --tree-filter 'rm -f file-too.big' HEAD
+```
+
+
 ## Dockers
 
 **Download Docker**
