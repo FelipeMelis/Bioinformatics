@@ -65,8 +65,10 @@ run --privileged --cap-add=MKNOD --cap-add=SYS_ADMIN --device=/dev/fuse --rm -it
 
 **Prokka**
 Software for bacterial genome annotation
+
 https://github.com/tseemann/prokka 
 
 **Snippy**
 Rapid SNP calling for bacterial genomes
+
 https://github.com/tseemann/snippy
