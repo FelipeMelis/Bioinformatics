@@ -8,7 +8,7 @@ sed -n '1~4s/^@/>/p;2~4p’ file.fastq > file.fasta
 ```
 **Rename files from different folders**
 ```
-ls | while read line ; do cp ./${line}/file.fl ./${line}
+ls | while read line ; do cp ./${line}/file.fl ./${line} ; done
 ```
 **Find files**
 ```
@@ -16,7 +16,7 @@ find / -name "file.txt"
 ```
 **Find zero bytes files and erase from the face of the earth!**
 ```
-find . -type f -size 0
+find . -type f -size 0 | while read line; do rm ${line} ; done 
 ```
 ## Dockers
 
