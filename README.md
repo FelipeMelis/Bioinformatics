@@ -2,6 +2,14 @@
 
 ## Bash
 
+**Create screen**
+```
+screen -S screen_name
+```
+**Enter the screen** 
+```
+screen -r screen_name
+```
 **Convert _fastq_ to _fasta_**
 ```
 sed -n '1~4s/^@/>/p;2~4p’ file.fastq > file.fasta
@@ -18,6 +26,7 @@ find / -name "file.txt"
 ```
 find . -type f -size 0 | while read line; do rm ${line} ; done 
 ```
+
 ## GitHub
 
 **Create a Branch**
@@ -37,7 +46,6 @@ git push origin branchname (or master (never do master))
 ```
 git filter-branch --tree-filter 'rm -f file-too.big' HEAD
 ```
-
 
 ## Dockers
 
