@@ -10,7 +10,7 @@ screen -r screen_name
 ```
 **Convert _fastq_ to _fasta_**
 ```
-sed -n '1~4s/^@/>/p;2~4p’ file.fastq > file.fasta
+sed -n '1~4s/^@/>/p;2~4p' file.fastq > file.fasta
 ```
 **Rename files from different folders**
 ```
