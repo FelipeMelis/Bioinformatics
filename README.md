@@ -1,4 +1,4 @@
-# This repos contains useful commands and tutorials
+# This repo contains useful commands and tutorials
 
 ## Commands
 
