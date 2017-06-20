@@ -21,7 +21,7 @@ Fix some usual problems with the sam files. <br />
 `samtools fixmate -O bam output.sam output_fixmate.bam`
 
 Sort the bam using a temporal file.<br /> 
-`samtools sort -O bam -o output_sorted.bam -T ./out_temp output_fixmate.sam`
+`samtools sort -O bam -o output_sorted.bam -T ./out_temp output_fixmate.bam`
 
 ## 4.- Get the mapped or unmapped reads 
 
