@@ -24,7 +24,7 @@ find / -name "file.txt"
 ```
 find . -type f -size 0 | while read line; do rm ${line} ; done
 ```
-**Double loop
+**Double loop**
 ```
 for i in *.txt ; do cat file.txt  while read line ; do echo $i $line; done ; done
 ```
