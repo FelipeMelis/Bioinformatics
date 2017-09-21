@@ -28,3 +28,12 @@ find . -type f -size 0 | while read line; do rm ${line} ; done
 ```
 for i in *.txt ; do cat file.txt  while read line ; do echo $i $line; done ; done
 ```
+
+**List of the elements in file_1 but not in file_2**
+```
+comm -23 <(sort file_1) <(sort file_2)
+```
+**List of the elements in file_2 but not in file_1**
+```
+comm -13 <(sort file_1) <(sort file_2)
+```
