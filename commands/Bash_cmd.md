@@ -23,4 +23,8 @@ find / -name "file.txt"
 **Find zero bytes files and erase them from the face of the earth!**
 ```
 find . -type f -size 0 | while read line; do rm ${line} ; done
-
+```
+**Double loop
+```
+for i in *.txt ; do cat file.txt  while read line ; do echo $i $line; done ; done
+```
