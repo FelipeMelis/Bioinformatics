@@ -37,3 +37,7 @@ comm -23 <(sort file_1) <(sort file_2)
 ```
 comm -13 <(sort file_1) <(sort file_2)
 ```
+**Count number of forward reads from a folder**
+```
+ls *R1* |while read line ; do awk '{s++}END{print s/4}' ${line}; done
+```
