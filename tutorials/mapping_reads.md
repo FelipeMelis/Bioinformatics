@@ -15,28 +15,22 @@ Options <br />
 Options:<br />
 `-t 20`: Number of threads used in the mapping.
 
-## 3.- Tunning the sam
+## 3.- Filter and convert the sam to bam
 
-Fix some usual problems with the sam files. <br /> 
-`samtools fixmate -O bam output.sam output_fixmate.bam`
+`samtools view -bS -f 3 output.sam > output_filter.bam`
+
+`-f 3`: this option deliver the properly mapped reads (in pairs)
+
+## 4.- Sorting the sam
 
 Sort the bam using a temporal file.<br /> 
-`samtools sort -O bam -o output_sorted.bam -T ./out_temp output_fixmate.bam`
+`samtools sort -O bam -o output_sorted.bam -T ./out_temp output.bam`
 
-## 4.- Get the mapped or unmapped reads 
+## 4.- Indexing the sam
 
-Get the mapped reads in sam or bam format. <br />
-`samtools view -F 4 output_sorted.bam > mapped.sam` <br />
-`samtools view -b -F 4 output_sorted.bam > mapped.bam`
-
-Get the unmapped reads in sam or bam format. <br />
-`samtools view -f 4 output_sorted.bam > unmapped.sam` <br />
-`samtools view -b -f 4 output_sorted.bam > unmapped.bam`
+`samtools index output_filter_sorted.bam`
 
 ## 5.- Get the counts
- 
- Using the sam file. <br />
- `awk '{print $3}' mapped.sam | sort | uniq -c | awk '{print $2, $1}' | sed 's/ /\t/g'`
- 
+
  Using idxstat and the bam file. <br />
  `samtools idxstats output_sorted.bam > out.stat`
